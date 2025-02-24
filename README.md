@@ -1,13 +1,13 @@
-# Self-Hosted Sentry 23.11.0
+# Self-Hosted Sentry 24.8.0
 
 Official bootstrap for running your own [Sentry](https://sentry.io/) with [Docker](https://www.docker.com/).
 
 ## Requirements
 
 * Docker 19.03.6+
-* Compose 2.0.1+
+* Compose 2.19.0+
 * 4 CPU Cores
-* 8 GB RAM
+* 16 GB RAM
 * 20 GB Free Disk Space
 
 ## Setup
