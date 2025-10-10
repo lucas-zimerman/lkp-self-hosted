@@ -1,5 +1,157 @@
 # Changelog
 
+## 25.5.1
+
+### Various fixes & improvements
+
+- Add missing lib script to sentry-admin.sh (#3693) by @djakielski
+- chore: cleanup obsolete feature flags (#3701) by @doc-sheet
+
+## 25.5.0
+
+### Various fixes & improvements
+
+- build(deps): bump actions/create-github-app-token from 2.0.2 to 2.0.6 (#3690) by @dependabot
+- Resolve datetime deprecation warnings (#3686) by @emmanuel-ferdman
+- ref: remove SENTRY_USE_BIG_INTS (always True) (#3687) by @asottile-sentry
+
+## 25.4.0
+
+### Stand-alone Docker Compose Fixes
+
+By: @aminvakil (#3658, #3654)
+
+### Various fixes & improvements
+
+- chore(relay): specify spool.enveloppe.max_backpressure_memory_percent configuration for handling relay's failing healthcheck (#3635) by @aldy505
+- build(deps): bump actions/create-github-app-token from 1.12.0 to 2.0.2 (#3649) by @dependabot
+- build(deps): bump actions/create-github-app-token from 1.11.7 to 1.12.0 (#3639) by @dependabot
+- Minimum requirements for 'errors-only' profile (#3634) by @madest92
+- build(deps): bump actions/create-github-app-token from 1.11.6 to 1.11.7 (#3632) by @dependabot
+- feat(sentry): add dynamic sampling feature to config (#3631) by @aldy505
+- docs(config): add example config for Google Auth (#3623) by @junsung-cho
+- fix: js-sdk directory/file permission should be set correctly (#3616) by @aldy505
+- feat(features): enable session replay canvas (#3619) by @aldy505
+
+## 25.3.0
+
+### Various fixes & improvements
+
+- feat(features): enable trace view (#3617) by @aldy505
+- feat: provide monitoring-related configurations (#3611) by @aldy505
+- Enforce license compliance only on getsentry repository (#3606) by @aminvakil
+- Fix unbound variable error in install script (#3601) by @brettdh
+- Add --short to docker-compose version (#3605) by @aminvakil
+- ref: Less complicated docker compose detection (#3604) by @BYK
+- Use docker-compose if version is gte docker compose (#3595) by @aminvakil
+- build(deps): bump actions/create-github-app-token from 1.11.3 to 1.11.6 (#3598) by @dependabot
+- build(deps): bump getsentry/action-release from 1 to 3 (#3599) by @dependabot
+- Bump docker-compose 2.33.1 (#3597) by @aminvakil
+- refactor: move system.url-prefix under systems settings section (#3588) by @leeoocca
+
+## 25.2.0
+
+### Various fixes & improvements
+
+- build(deps): bump actions/create-github-app-token from 1.11.2 to 1.11.3 (#3569) by @dependabot
+- feat: merge `.env` and `.env.custom` file during installation (#3564) by @aldy505
+- build(deps): bump actions/create-github-app-token from 1.11.1 to 1.11.2 (#3561) by @dependabot
+- feat: Require both inputs to be set on action (#3554) by @BYK
+- ref: Simpler and more accurate cache keys (#3553) by @BYK
+- Hand off open-source to dev-infra (#3549) by @chadwhitacre
+- ci: Remove obsolete `dcr up -w` from import test (#3544) by @BYK
+- fix: github.action_path may not have trailing slash (#3547) by @BYK
+- chore: Remove upgrade test (#3541) by @hubertdeng123
+- fix: Use correct path for get compose action (#3539) by @hubertdeng123
+- fix: Caching of sentry migrations should cover additional folders (#3542) by @hubertdeng123
+- ci: Move self-contained action reference to master branch (#3538) by @BYK
+- breaking: Upgrade min Compose version to 2.23.2 (#3535) by @BYK
+- ci: Even better cache keys and granular caching (#3534) by @BYK
+- test: Reorganize backup/restore tests for speed and reliability (#3537) by @BYK
+
+## 25.1.0
+
+### Various fixes & improvements
+
+- ci: Use generic Docker volume cache action (#3524) by @BYK
+- ci: Less volatile cache keys (#3522) by @BYK
+- docs: include regular env file on wrap-up (#3523) by @aldy505
+- ci: Faster and smarter backup/restore tests (#3516) by @BYK
+- fix: Fix the new e2e action to be portable (#3520) by @BYK
+- ci: Move e2e test action into the repo (#3519) by @BYK
+- ci: Only test on compose 2.26 w/ customizations (#3506) by @BYK
+- ci: Skip DB ops during install completely on cache hit (#3496) by @BYK
+- chore: Remove everything zookeeper (#3499) by @hubertdeng123
+- ci: Cache postgres volume after first migration (#3488) by @BYK
+- fix: Remove the extra space in the log file names (#3212) by @melnele
+- ref(snuba): Combine bootstrap & migrate for faster bootstrap (#3491) by @BYK
+- ref(geoip): Remove geoipupdate from compose (#3490) by @BYK
+- build(deps): bump actions/create-github-app-token from 1.11.0 to 1.11.1 (#3492) by @dependabot
+
+## 24.12.1
+
+### Various fixes & improvements
+
+- chore: clearer message for errors-only mode (#3487) by @aldy505
+- chore(relay): provide opt-in max_memory_percent config as workaround for failing healthcheck (#3486) by @aldy505
+- fix(nginx): _assets should rewrite to _static/sentry/dist (#3483) by @BYK
+
+## 24.12.0
+
+- No documented changes.
+
+## 24.11.2
+
+### Various fixes & improvements
+
+- fix(redis): Actually use custom config (#3459) by @BYK
+- feat(release): Replace release bot with GH app (#3458) by @Jeffreyhung
+- chore(issue-template): ask for machine specification and provide link to security policy (#3447) by @aldy505
+- add sentry/backup.json to gitignore (#3450) by @niklassc7
+- ref: remove suggested fix (#3446) by @aldy505
+
+## 24.11.1
+
+### Various fixes & improvements
+
+- fix(redis): Use a safer eviction rule (#3432) by @BYK
+- feat: add Redis configuration for improved memory management (#3427) by @Hassanzadeh-sd
+- build(deps): bump codecov/codecov-action from 4 to 5 (#3429) by @dependabot
+
+## 24.11.0
+
+### Various fixes & improvements
+
+- feat(healthcheck): Improve redis healthcheck (#3422) by @hubertdeng123
+- fix: missing mime types and turning off autoindex for js-sdk endpoint (#3395) by @aldy505
+- fix: Use js.sentry-cdn.com for JS SDK downloads (#3417) by @BYK
+- fix(loader): provide js sdk assets from 4.x (#3415) by @aldy505
+- Revert "Revert "ref(feedback): remove issue platform flags after releasing issue types"" (#3403) by @BYK
+- Revert "ref(feedback): remove issue platform flags after releasing issue types" (#3402) by @BYK
+- ref(feedback): remove issue platform flags after releasing issue types (#3397) by @aliu39
+- fix(sentry-admin): Do not wait for command finish to display output (#3390) by @Makhonya
+
+## 24.10.0
+
+### Various fixes & improvements
+
+- chore: Disable codecov for master/release branches (#3384) by @hubertdeng123
+- chore: replace old URLs of the repo with the new docs (#3375) by @victorelec14
+- ref: span normalization allowed host config (#3245) by @aldy505
+- docs: explicitly specify `mail.use-{tls,ssl}` is mutually exclusive (#3368) by @aldy505
+- ref: allow hosted js sdk bundles (#3365) by @aldy505
+- fix(clickhouse): Allow nullable key (#3354) by @nikhars
+
+## 24.9.0
+
+### Various fixes & improvements
+
+- docs: link to develop docs (#3307) by @joshuarli
+- fix: more leeway for minimum RAM (#3290) by @joshuarli
+- Mandate minimum requirements for ram/cpu (#3275) by @hubertdeng123
+- ref(feedback): cleanup topic rollout option (#3276) by @aliu39
+- Update release template (#3270) by @hubertdeng123
+
 ## 24.8.0
 
 ### Various fixes & improvements
