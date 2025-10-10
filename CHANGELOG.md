@@ -1,5 +1,105 @@
 # Changelog
 
+## 25.9.0
+
+### Various fixes & improvements
+
+- fix: able to setup nodestore multiple times (#3940) by @aldy505
+- build(deps): bump actions/create-github-app-token from 2.1.1 to 2.1.4 (#3936) by @dependabot
+- docs: provide information for SENTRY_AIR_GAP flag on Django config file (#3935) by @aldy505
+- feat: Use S3 node store with seaweedfs (#3498) by @BYK
+- feat(tasks): Remove taskworker option override and add worker healthcheck (#3933) by @markstory
+- feat: install script to migrate sentry.conf.py config to use pgbouncer (#3898) by @aldy505
+- chore(deps): bump clickhouse to 25.3 (#3878) by @aldy505
+- feat: enable `issue-views` flag (#3922) by @aldy505
+- feat: query against `eap` dataset instead of `metrics` dataset for spans (#3923) by @aldy505
+- build(deps): bump actions/setup-python from 5 to 6 (#3927) by @dependabot
+- Add restart policy to pgbouncer service (#3925) by @frederikspang
+- fix(tests): skip logs event test for errors-only (#3915) by @aldy505
+- Improve nginx depends_on policy (#3914) by @aminvakil
+- test: run errors-only integration tests (#3910) by @aldy505
+- feat: enable Logs feature (#3912) by @aldy505
+- fix: ensuring vroom permission should be skipped on errors-only (#3911) by @aldy505
+- chore(deps): bump patches version (#3879) by @aldy505
+- Revert "increase postgres max_connections above 100 connections (#2740)" (#3899) by @aminvakil
+- Add pgbouncer (#3884) by @frederikspang
+- chore: resolve GHA code scanning alerts (#3889) by @aldy505
+- fix(enhancement): search for permissions on docker container instead of host and combine it in one command for performance enhancement (#3890) by @LvckyAPI
+- build(deps): bump actions/create-github-app-token from 2.1.0 to 2.1.1 (#3885) by @dependabot
+- build(deps): bump actions/checkout from 4 to 5 (#3883) by @dependabot
+
+## 25.8.0
+
+### Various fixes & improvements
+
+- feat: Relay healthcheck (#3875) by @aldy505
+- fix: setup swapfile only if runner architecture is X64 or X86 (#3876) by @aldy505
+- Set minimum bash version to 4.4.0 (#3873) by @aminvakil
+- fix: adjust file healthcheck durations (#3874) by @mzglinski
+- feat: healthchecks for sentry components (#3859) by @mzglinski
+- fix(eap): Fix dataset parameter to target spans (#3866) by @phacops
+- build(deps): bump actions/create-github-app-token from 2.0.6 to 2.1.0 (#3865) by @dependabot
+- fix(scripts): use `env` to find `bash` interpreter (#3861) by @Zaczero
+- fix(scripts): every known flags should be shifted before executing the sentry <foo> command (#3831) by @aldy505
+- fix: uptime checker image should be bumped to the tagged release (#3858) by @aldy505
+- fix(enhancement): ensure correct ownership check before setting permissions of profiles (#3855) by @LvckyAPI
+- chore(features): cleanup feature flags grouped by its' category (#3843) by @aldy505
+- fix: add schedulers for generic metrics subscriptions (#3847) by @mzglinski
+- feat: Continue using celery in self-hosted for now (#3845) by @markstory
+- feat(features): add `profiling-view` flag (#3837) by @aldy505
+- Potential fix for code scanning alert no. 12: Workflow does not contain permissions (#3822) by @aldy505
+- docs: clearly state that `system.internal-url-prefix` shouldn't be changed (#3829) by @aldy505
+- feat(install): Adds support for podman(compose) (#3673) by @DuncanConroy
+- fix(action): missing project directory path for failure inspection (#3825) by @aldy505
+- Cleanup unused feature flags (#3820) by @doc-sheet
+- feat: inspect docker compose failure on self-hosted e2e action (#3817) by @aldy505
+
+## 25.7.0
+
+### Various fixes & improvements
+
+- feat: Swap `trace-view-v1` feature flag with `visibility-explore-view` (#3801) by @aldy505
+- fix: set harakiri Django option to 30s (#3792) by @aldy505
+- feat(images):Cutover images to ghcr (#3800) by @hubertdeng123
+- docs: encourage community patches (#3794) by @aldy505
+- feat: run EAP-related containers (#3778) by @aldy505
+- feat(uptime): Enable uptime in self-hosted (#3787) by @evanpurkhiser
+- feat: make `system.secret-key` configurable from environment variables (#3783) by @aldy505
+- ci: run tests on arm64 (#3750) by @aldy505
+
+## 25.6.2
+
+### Various fixes & improvements
+
+- fix: Increase timeout for flakey test (#3781) by @tobias-wilfert
+- chore: provide detailed note for sentry endpoint settings (#3780) by @aldy505
+
+## 25.6.1
+
+### Various fixes & improvements
+
+- fix(taskworker) Remove num-brokers (#3769) by @markstory
+- feat: enable customization sentry DSN endpoint (#3747) by @yildizozgur
+- ref(js-assets): Simplify how we call nginx container (#3761) by @BYK
+- Revert "fix(vroom): Explicitly set PROFILES_DIR for upcoming change" (#3760) by @hubertdeng123
+- fix(vroom): Explicitly set PROFILES_DIR for upcoming change (#3759) by @BYK
+
+## 25.6.0
+
+### Various fixes & improvements
+
+- enable shell linter for more scripts (#3748) by @doc-sheet
+- feat: migrate to arm64-compatible smtp image (#3746) by @ezhevita
+- Introduce patches with external kafka (#3521) by @aldy505
+- add shellcheck action to lint bash scripts (#3710) by @doc-sheet
+- tests: Install version 2.x of Python SDK (#3745) by @sentrivana
+- feat(features): enable continuous profiling (#3742) by @aldy505
+- feat: Add taskbroker + worker + scheduler (#3738) by @markstory
+- fix(profiles): Run the profile chunks consumer (#3739) by @phacops
+- chore: prune removed feature flags on main repository (#3731) by @aldy505
+- remove index workaround (#3730) by @asottile-sentry
+- Make usage of Python SDK future proof (#3714) by @antonpirker
+
 ## 25.5.1
 
 ### Various fixes & improvements
